@@ -323,7 +323,6 @@ body{
 /*inicio da área de rodapé*/
 
 .rodape {
-    bottom: 0;
     width: 100%;
     background-color: rgb(51, 8, 60);
     color: #f39d36;
@@ -346,7 +345,9 @@ body{
 .footerlinks a {
     text-decoration: none;
     padding: 0 10px; /* Espaçamento entre os links */
-    color: #f39d36; /* Cor dos links */
+    margin-bottom: 10px;
+    margin-top: 10px;
+
 }
 
 footer p {
