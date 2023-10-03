@@ -49,6 +49,8 @@ table {
 
 /*fim css reset*/
 
+
+
 html{
     min-height: 100%;
 }
@@ -57,7 +59,8 @@ body{
     background-color: #050a0d;
     display: flex;
     flex-direction: column;
-
+    height: auto;
+    margin: 0;
 }
 
 /*começo da barra de navegação*/
@@ -171,7 +174,6 @@ body{
     flex-direction: column;
     color: white;
     width: 70vw;
-    height: 20vh;
     margin: auto;
     padding-top: 100px;
 }
@@ -216,6 +218,8 @@ body{
 
 .cardsflex{
     display: flex; /*para que pudesse criar os cards um ao lado do outro e manter o texto em coluna*/
+    justify-content: space-between; /* distribui os cards lado a lado com o tamanho entre eles*/
+    flex-wrap: wrap; /* Pra que os cards fiquem certos qnd em telas menores*/
     margin: auto;
     gap:20px;
 }
@@ -293,8 +297,8 @@ body{
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
-    background-color: transparent; /* Remova o fundo padrão dos campos de entrada */
-    border: 1px solid #f39d36; /* Adicione uma borda para destacar os campos */
+    background-color: transparent; /* Remove o fundo padrão dos campos de entrada */
+    border: 1px solid #f39d36; /* Adiciona uma borda para destacar os campos */
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -358,3 +362,101 @@ footer p {
 
 
 /*fim da área de rodapé*/
+
+/* Media Queries para responsividade */
+@media screen and (max-width: 768px) {
+    /* estilos para telas de até width 768px */
+    .headernav li a {
+        font-size: 30px;
+    }
+
+    .herobannerinfo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .herobannerinfo p {
+        font-size: 20px;
+    }
+
+    .herobannerinfo h2 {
+        font-size: 30px;
+    }
+
+    .herobannerinfo h3 {
+        font-size: 20px;
+    }
+
+    .herobannerinfo img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .coluna {
+        margin-top: 50px;
+    }
+
+    .gradiente {
+        height: 100px;
+    }
+
+    .infoflex {
+        width: 90vw;
+        padding-top: 50px;
+    }
+
+    .infotext {
+        font-size: 40px;
+    }
+
+    .infotext2 {
+        font-size: 18px;
+    }
+
+    .cursoflex {
+        width: 80vw;
+        margin-top: 20px;
+    }
+
+    .cursotext {
+        font-size: 16px;
+    }
+
+    .cursotext2 {
+        font-size: 14px;
+    }
+
+    .cardsflex {
+        flex-direction: column;
+  
+    }
+
+    .form-container {
+        width: 90vw;
+        padding-top: 40px;
+    }
+
+    .form label,
+    .form input,
+    .form textarea {
+        font-size: 16px;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form textarea {
+        padding: 8px;
+    }
+
+    .form input[type="submit"] {
+        padding: 10px 15px;
+    }
+
+    .footerlinks a {
+        padding: 0 5px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
